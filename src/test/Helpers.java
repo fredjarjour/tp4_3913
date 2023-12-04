@@ -6,22 +6,9 @@ import currencyConverter.MainWindow;
 import java.util.ArrayList;
 
 public class Helpers {
-    public static Double[][] actualAndExpectedMainWindowConversions(Double[] amounts) {
-        Double[] actualResults = calculateActualConversions(amounts);
-        Double[] expectedResults = calculateMainWindowConversions(amounts);
-
-        return new Double[][] {actualResults, expectedResults};
-    }
-
-    public static Double[][] actualAndExpectedCurrencyConversions(Double[] amounts) {
-        Double[] actualResults = calculateActualConversions(amounts);
-        Double[] expectedResults = calculateCurrencyConversions(amounts);
-
-        return new Double[][] {actualResults, expectedResults};
-    }
+    static ArrayList<Currency> currencies = Currency.init();
 
     public static Double[] calculateMainWindowConversions(Double[] amounts) {
-        ArrayList<Currency> currencies = Currency.init();
         int arraySize = amounts.length * currencies.size() * currencies.size();
         Double[] results = new Double[arraySize];
 
@@ -42,7 +29,6 @@ public class Helpers {
     }
 
     public static Double[] calculateCurrencyConversions(Double[] amounts) {
-        ArrayList<Currency> currencies = Currency.init();
         int arraySize = amounts.length * currencies.size() * currencies.size();
         Double[] results = new Double[arraySize];
 
@@ -63,7 +49,6 @@ public class Helpers {
     }
 
     public static Double[] calculateActualConversions(Double[] amounts) {
-        ArrayList<Currency> currencies = Currency.init();
         int arraySize = amounts.length * currencies.size() * currencies.size();
         Double[] results = new Double[arraySize];
 

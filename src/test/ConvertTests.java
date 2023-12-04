@@ -9,9 +9,8 @@ class ConvertTests {
     void MainWindowConvertIntegers() {
         Double[] amounts = new Double[] {0d, 1d, 1000d, 1_000_000d};
 
-        Double[][] actualAndExpectedArrays = Helpers.actualAndExpectedMainWindowConversions(amounts);
-        Double[] actualResults = actualAndExpectedArrays[0];
-        Double[] expectedResults = actualAndExpectedArrays[1];
+        Double[] actualResults = Helpers.calculateMainWindowConversions(amounts);
+        Double[] expectedResults = Helpers.calculateActualConversions(amounts);
 
         Assertions.assertArrayEquals(actualResults, expectedResults);
     }
@@ -20,9 +19,8 @@ class ConvertTests {
     void MainWindowConvertDecimals() {
         Double[] amounts = new Double[] {0.5, Math.sqrt(2), Math.PI, 99.99, 1000.001};
 
-        Double[][] actualAndExpectedArrays = Helpers.actualAndExpectedMainWindowConversions(amounts);
-        Double[] actualResults = actualAndExpectedArrays[0];
-        Double[] expectedResults = actualAndExpectedArrays[1];
+        Double[] actualResults = Helpers.calculateMainWindowConversions(amounts);
+        Double[] expectedResults = Helpers.calculateActualConversions(amounts);
 
         Assertions.assertArrayEquals(actualResults, expectedResults);
     }
@@ -53,9 +51,8 @@ class ConvertTests {
     void CurrencyConvertIntegers() {
         Double[] amounts = new Double[] {0d, 1d, 1000d, 1_000_000d};
 
-        Double[][] actualAndExpectedArrays = Helpers.actualAndExpectedCurrencyConversions(amounts);
-        Double[] actualResults = actualAndExpectedArrays[0];
-        Double[] expectedResults = actualAndExpectedArrays[1];
+        Double[] actualResults = Helpers.calculateCurrencyConversions(amounts);
+        Double[] expectedResults = Helpers.calculateActualConversions(amounts);
 
         Assertions.assertArrayEquals(actualResults, expectedResults);
     }
@@ -64,9 +61,8 @@ class ConvertTests {
     void CurrencyConvertDecimals() {
         Double[] amounts = new Double[] {0.5, Math.sqrt(2), Math.PI, 99.99, 1000.001};
 
-        Double[][] actualAndExpectedArrays = Helpers.actualAndExpectedCurrencyConversions(amounts);
-        Double[] actualResults = actualAndExpectedArrays[0];
-        Double[] expectedResults = actualAndExpectedArrays[1];
+        Double[] actualResults = Helpers.calculateCurrencyConversions(amounts);
+        Double[] expectedResults = Helpers.calculateActualConversions(amounts);
 
         Assertions.assertArrayEquals(actualResults, expectedResults);
     }
