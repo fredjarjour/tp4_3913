@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import java.util.Arrays;
 
-class ConvertTests {
+class ConvertTestsBlackBox {
     @Test
     void MainWindowConvertIntegers() {
         Double[] amounts = new Double[] {0d, 1d, 1000d, 1_000_000d};
@@ -12,7 +12,7 @@ class ConvertTests {
         Double[] actualResults = Helpers.calculateMainWindowConversions(amounts);
         Double[] expectedResults = Helpers.calculateActualConversions(amounts);
 
-        Assertions.assertArrayEquals(actualResults, expectedResults);
+        Assertions.assertArrayEquals(expectedResults, actualResults);
     }
 
     @Test
@@ -22,7 +22,7 @@ class ConvertTests {
         Double[] actualResults = Helpers.calculateMainWindowConversions(amounts);
         Double[] expectedResults = Helpers.calculateActualConversions(amounts);
 
-        Assertions.assertArrayEquals(actualResults, expectedResults);
+        Assertions.assertArrayEquals(expectedResults, actualResults);
     }
 
     @Test
@@ -33,7 +33,7 @@ class ConvertTests {
         Double[] expectedResults = new Double[actualResults.length];
         Arrays.fill(expectedResults, -1d); // We expect the program to return -1 on error
 
-        Assertions.assertArrayEquals(actualResults, expectedResults);
+        Assertions.assertArrayEquals(expectedResults, actualResults);
     }
 
     @Test
@@ -44,7 +44,7 @@ class ConvertTests {
         Double[] expectedResults = new Double[actualResults.length];
         Arrays.fill(expectedResults, -1d); // We expect the program to return -1 on error
 
-        Assertions.assertArrayEquals(actualResults, expectedResults);
+        Assertions.assertArrayEquals(expectedResults, actualResults);
     }
 
     @Test
@@ -54,7 +54,7 @@ class ConvertTests {
         Double[] actualResults = Helpers.calculateCurrencyConversions(amounts);
         Double[] expectedResults = Helpers.calculateActualConversions(amounts);
 
-        Assertions.assertArrayEquals(actualResults, expectedResults);
+        Assertions.assertArrayEquals(expectedResults, actualResults);
     }
 
     @Test
@@ -64,7 +64,7 @@ class ConvertTests {
         Double[] actualResults = Helpers.calculateCurrencyConversions(amounts);
         Double[] expectedResults = Helpers.calculateActualConversions(amounts);
 
-        Assertions.assertArrayEquals(actualResults, expectedResults);
+        Assertions.assertArrayEquals(expectedResults, actualResults);
     }
 
     @Test
@@ -75,7 +75,7 @@ class ConvertTests {
         Double[] expectedResults = new Double[actualResults.length];
         Arrays.fill(expectedResults, -1d); // We expect the program to return -1 on error
 
-        Assertions.assertArrayEquals(actualResults, expectedResults);
+        Assertions.assertArrayEquals(expectedResults, actualResults);
     }
 
     @Test
@@ -86,6 +86,6 @@ class ConvertTests {
         Double[] expectedResults = new Double[actualResults.length];
         Arrays.fill(expectedResults, -1d); // We expect the program to return -1 on error
 
-        Assertions.assertArrayEquals(actualResults, expectedResults);
+        Assertions.assertArrayEquals(expectedResults, actualResults);
     }
 }
