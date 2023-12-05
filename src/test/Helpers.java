@@ -8,10 +8,12 @@ import java.util.ArrayList;
 public class Helpers {
     static ArrayList<Currency> currencies = Currency.init();
 
+    // Helper functions to calculate conversions for the main window
     public static Double[] calculateMainWindowConversions(Double[] amounts) {
         return calculateMainWindowConversions(amounts, currencies);
     }
 
+    // Helper functions to calculate conversions for the main window
     public static Double[] calculateMainWindowConversions(Double[] amounts, ArrayList<Currency> currencies) {
         int arraySize = amounts.length * currencies.size() * currencies.size();
         Double[] results = new Double[arraySize];
@@ -32,10 +34,12 @@ public class Helpers {
         return results;
     }
 
+    // Helper functions to calculate conversions for Currency.convert
     public static Double[] calculateCurrencyConversions(Double[] amounts) {
         return calculateCurrencyConversions(amounts, currencies);
     }
 
+    // Helper functions to calculate conversions for Currency.convert
     public static Double[] calculateCurrencyConversions(Double[] amounts, ArrayList<Currency> currencies) {
         int arraySize = amounts.length * currencies.size() * currencies.size();
         Double[] results = new Double[arraySize];
@@ -56,10 +60,12 @@ public class Helpers {
         return results;
     }
 
+    // Helper functions to calculate conversions ourselves
     public static Double[] calculateActualConversions(Double[] amounts) {
         return calculateActualConversions(amounts, currencies);
     }
 
+    // Helper functions to calculate conversions ourselves
     public static Double[] calculateActualConversions(Double[] amounts, ArrayList<Currency> currencies) {
         int arraySize = amounts.length * currencies.size() * currencies.size();
         Double[] results = new Double[arraySize];
