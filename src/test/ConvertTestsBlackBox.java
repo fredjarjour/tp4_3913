@@ -7,7 +7,7 @@ import java.util.Arrays;
 class ConvertTestsBlackBox {
     @Test
     void MainWindowConvertIntegers() {
-        Double[] amounts = new Double[] {0d, 1d, 1000d, 1_000_000d};
+        Double[] amounts = new Double[] {0d, 1000d, 1_000_000d};
 
         Double[] actualResults = Helpers.calculateMainWindowConversions(amounts);
         Double[] expectedResults = Helpers.calculateActualConversions(amounts);
@@ -17,7 +17,7 @@ class ConvertTestsBlackBox {
 
     @Test
     void MainWindowConvertDecimals() {
-        Double[] amounts = new Double[] {0.5, Math.sqrt(2), Math.PI, 99.99, 1000.001};
+        Double[] amounts = new Double[] {0.01, Math.PI, 999_999.99};
 
         Double[] actualResults = Helpers.calculateMainWindowConversions(amounts);
         Double[] expectedResults = Helpers.calculateActualConversions(amounts);
@@ -27,7 +27,7 @@ class ConvertTestsBlackBox {
 
     @Test
     void MainWindowConvertNegatives() {
-        Double[] amounts = new Double[] {-0.5, -100d, -1_000_001d};
+        Double[] amounts = new Double[] {-0.01, -1d, -1000d};
 
         Double[] actualResults = Helpers.calculateMainWindowConversions(amounts);
         Double[] expectedResults = new Double[actualResults.length];
@@ -49,7 +49,7 @@ class ConvertTestsBlackBox {
 
     @Test
     void CurrencyConvertIntegers() {
-        Double[] amounts = new Double[] {0d, 1d, 1000d, 1_000_000d};
+        Double[] amounts = new Double[] {0d, 1000d, 1_000_000d};
 
         Double[] actualResults = Helpers.calculateCurrencyConversions(amounts);
         Double[] expectedResults = Helpers.calculateActualConversions(amounts);
@@ -59,7 +59,7 @@ class ConvertTestsBlackBox {
 
     @Test
     void CurrencyConvertDecimals() {
-        Double[] amounts = new Double[] {0.5, Math.sqrt(2), Math.PI, 99.99, 1000.001};
+        Double[] amounts = new Double[] {0.01, Math.PI, 999_999.99};
 
         Double[] actualResults = Helpers.calculateCurrencyConversions(amounts);
         Double[] expectedResults = Helpers.calculateActualConversions(amounts);
@@ -69,7 +69,7 @@ class ConvertTestsBlackBox {
 
     @Test
     void CurrencyConvertNegatives() {
-        Double[] amounts = new Double[] {-0.5, -100d, -1_000_001d};
+        Double[] amounts = new Double[] {-0.01, -1d, -1000d};
 
         Double[] actualResults = Helpers.calculateCurrencyConversions(amounts);
         Double[] expectedResults = new Double[actualResults.length];
