@@ -9,7 +9,7 @@ import java.util.ArrayList;
 
 public class ConvertTestsWhiteBox {
     @Test
-    void MainWindowNormalBehaviour() {
+    void MainWindowNormalBehaviour() { //Test if the Main Window conversion gives the correct result
         ArrayList<Currency> currencies = Currency.init();
 
         Currency curr1 = currencies.get(0);
@@ -24,13 +24,13 @@ public class ConvertTestsWhiteBox {
     }
 
     @Test
-    void MainWindowShortNameCurrency2Null() {
+    void MainWindowShortNameCurrency2Null() { //Test if the Main Window conversion gives the correct result
         Double result = MainWindow.convert("US Dollar", "Zimbabwe dollar", Currency.init(), 1d);
         Assertions.assertEquals(-1d, result);
     }
 
     @Test
-    void MainWindowCurrency1NotInCurrencies() {
+    void MainWindowCurrency1NotInCurrencies() { //Test if the Main Window conversion gives the correct result with a currency that is not in the list
         ArrayList<Currency> currencies = Currency.init();
 
         // Remove USD from the currencies
@@ -44,7 +44,7 @@ public class ConvertTestsWhiteBox {
     }
 
     @Test
-    void MainWindowCurrenciesEmpty() {
+    void MainWindowCurrenciesEmpty() { //Test if Main Window conversion gives the correct result with an empty list of currencies
         ArrayList<Currency> currencies = new ArrayList<>();
 
         Double result = MainWindow.convert("US Dollar", "Euro", currencies, 1d);
@@ -52,7 +52,7 @@ public class ConvertTestsWhiteBox {
     }
 
     @Test
-    void MainWindowAllCombinations() {
+    void MainWindowAllCombinations() { //Test if the Main Window conversion gives the correct result for all combinations of currencies
         Double[] amounts = new Double[] {1d};
 
         Double[] actualResults = Helpers.calculateMainWindowConversions(amounts);
@@ -62,7 +62,7 @@ public class ConvertTestsWhiteBox {
     }
 
     @Test
-    void CurrencyNormalBehaviour() {
+    void CurrencyNormalBehaviour() {  //Test if the Currency conversion gives the correct result
         ArrayList<Currency> currencies = Currency.init();
         Currency curr1 = currencies.get(0);
         Currency curr2 = currencies.get(1);
